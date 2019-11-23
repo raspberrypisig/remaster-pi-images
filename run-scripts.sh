@@ -18,7 +18,8 @@ cp /usr/bin/qemu-$ARCH-static ${mount_dir}/usr/bin
 
 for script in `ls ./scripts/*.sh`
 do
-  bash $script
+  cp $script $mount_dir/$(basename $script)
+  chroot $mount_dir qemu-$ARCH-static bash /$script
 done
 
 umount $mount_dir
