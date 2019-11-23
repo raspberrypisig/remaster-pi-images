@@ -16,7 +16,7 @@ mount ${loop_disk_image}p2 $mount_dir
 
 cp /usr/bin/qemu-$ARCH-static ${mount_dir}/usr/bin
 
-for script in `ls scripts\*.sh`
+for script in `ls ./scripts/*.sh`
 do
   bash $script
 done
