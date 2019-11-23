@@ -3,7 +3,7 @@
 set -xe
 
 LINUX_DIR=/mnt/remastered
-BOOT_DIR=$MOUNT_DIR/boot
+BOOT_DIR=$LINUX_DIR/boot
 mkdir -p $BOOT_DIR
 
 REMASTERED_IMAGE="$1"
