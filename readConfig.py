@@ -1,10 +1,12 @@
 import toml
 import sys
 
-def main(arg):
-	config=toml.load('config.toml')
-	return config[arg]
+def main(*args):
+    config=toml.load('config.toml')
+    for arg in args[0]:
+        config=config[arg]
+    print(config)
+	    
 	
 if __name__ == '__main__':
-	main(sys.argv[1])
-
+    main(sys.argv[1:])
