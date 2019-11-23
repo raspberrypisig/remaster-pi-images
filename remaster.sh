@@ -7,10 +7,10 @@ apt -y update
 apt install -y python3-pip
 pip3 install toml
 
-ORIGINAL_IMAGE=$(python3 readConfig.py ORIGINAL_IMAGE)
-REMASTERED_IMAGE=$(python3 readConfig.py REMASTERED_IMAGE)
-INCREASE_DISK_SIZE_AMOUNT_MB=$(python3 readConfig.py INCREASE_DISK_SIZE_AMOUNT_MB)
-ARCH=$(python3 readConfig.py ARCH)
+ORIGINAL_IMAGE=$(python3 readConfig.py Release ORIGINAL_IMAGE)
+REMASTERED_IMAGE=$(python3 readConfig.py Release REMASTERED_IMAGE)
+INCREASE_DISK_SIZE_AMOUNT_MB=$(python3 readConfig.py Release INCREASE_DISK_SIZE_AMOUNT_MB)
+ARCH=$(python3 readConfig.py Release ARCH)
 
 # Sanity checks
 
@@ -20,7 +20,7 @@ then
   exit 1
 fi
 
-if [ ! -f $REMASTERED_IMAGE ];
+if [ -f $REMASTERED_IMAGE ];
 then
   echo "File $REMASTERED_IMAGE exists. Can't proceed until file is moved or deleted."
   exit 1
