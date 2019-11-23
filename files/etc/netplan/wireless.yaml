@@ -1,0 +1,12 @@
+network:
+  version: 2
+  renderer: NetworkManager
+  wifis:
+    wlp2s0b1:
+      dhcp4: yes
+      dhcp6: no
+      nameservers:
+        addresses: [8.8.4.4, 8.8.8.8]
+      access-points:
+        "MelbPC-NUE":
+          password: "peachspeak38"
