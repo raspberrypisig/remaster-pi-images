@@ -6,7 +6,7 @@ comment = "Feel free to modify for your requirements."
 #REMASTERED_IMAGE = "2019-09-26-raspbian-buster-remastered.img"
 ORIGINAL_IMAGE = "ubuntu-19.10-preinstalled-server-arm64+raspi3.img"
 REMASTERED_IMAGE = "ubuntu-19.10-preinstalled-server-arm64+raspi3-remastered.img"
-INCREASE_DISK_SIZE_AMOUNT_MB = 2048
+INCREASE_DISK_SIZE_AMOUNT_MB = 3064
 ARCH = "aarch64"
 #ARCH = "arm"
 
