@@ -5,7 +5,7 @@ set -xe
 LINUX_DIR=/mnt/remastered
 BOOT_DIR=$MOUNT_DIR/boot
 
-mkdir -p 
+mkdir -p $BOOT_DIR
 
 loop_mount_device=$(losetup --show -P -f $REMASTERED_IMAGE)
 mount ${loop_mount_device}p2 $LINUX_DIR
