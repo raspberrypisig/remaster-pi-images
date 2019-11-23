@@ -7,7 +7,7 @@ comment = "Feel free to modify for your requirements."
 ORIGINAL_IMAGE = "ubuntu-19.10-preinstalled-server-arm64+raspi3.img"
 REMASTERED_IMAGE = "ubuntu-19.10-preinstalled-server-arm64+raspi3-remastered.img"
 INCREASE_DISK_SIZE_AMOUNT_MB = 2048
-ARCH = "arm64"
+ARCH = "aarch64"
 #ARCH = "arm"
 
 [Locale]
