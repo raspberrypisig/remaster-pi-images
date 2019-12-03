@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+KEYBOARD="{{ KEYBOARD }}"
+LOCALE="{{ LOCALE }}"
+TIMEZONE="{{ TIMEZONE }}"
+
+raspi-config nonint do_configure_keyboard $KEYBOARD
+export LANG=$LOCALE
+export LC_ALL=$LOCALE
+export LANGUAGE=$LOCALE
+raspi-config nonint do_change_locale $LOCALE
+raspi-config nonint do_change_timezone $TIMEZONE
