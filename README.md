@@ -10,6 +10,7 @@ BYO raspbian image and leave with a remastered raspbian image.
 2.
 
 ```sh
+#Run as root
 curl -sSL https://raw.githubusercontent.com/raspberrypisig/remaster-pi-images/master/get.sh | bash -
 cd remaster-pi-images
 ```
@@ -20,7 +21,8 @@ cd remaster-pi-images
 5. Add files you want in the final image into the **files** directory
 6. Add scripts you want to run inside the image container (eg. to install packages) into the **scripts** directory. There are scripts
    included by default to do an apt-update and install nodered.
-7. Run
+7. 
 ```sh
+#Run as root
 bash remaster.sh
 ```
