@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 
 apt update
 apt install -y git
