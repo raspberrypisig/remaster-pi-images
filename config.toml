@@ -1,0 +1,30 @@
+title = "Main user config file"
+comment = "Feel free to modify for your requirements."
+
+[Release]
+ORIGINAL_IMAGE = "2019-09-26-raspbian-buster-lite.img"
+REMASTERED_IMAGE = "2019-09-26-raspbian-buster-lite-remastered.img"
+INCREASE_DISK_SIZE_AMOUNT_MB = 2048
+ARCH = "arm"
+
+[Locale]
+LC_ALL = "en_AU.UTF-8"
+
+[Keyboard]
+XKBLAYOUT="us"
+
+[TimeZone]
+TIMEZONE = "Australia/Melbourne"
+
+[Wifi]
+COUNTRY = "AU"
+  [Wifi.Home]
+  SSID = "mycrib"
+  PSK = "peachspeak38"
+  KEYMGMT = "WPA-PSK"
+  [Wifi.Away]
+  SSID = "MelbPC-NUE"
+  PSK = "peachspeak38"
+  KEYMGMT = "WPA-PSK"
+
+
