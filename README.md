@@ -20,6 +20,7 @@ cd remaster-pi-images
 4. Edit config.toml
    
    At minimum, you might want to edit the variables:
+   
    ORIGINAL_IMAGE, REMASTERED_IMAGE, INCREASE_DISK_SIZE_AMOUNT_MB .
    
 5. Add files you want in the final image into the **files** directory
