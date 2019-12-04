@@ -19,7 +19,7 @@ SERIAL=false
 VNC=false
 CAMERA=false
 
-[Raspbian.Wifi]
+[Raspbian.Wifis]
 COUNTRY= "AU"
 
 [[Raspbian.Wifi.Wifi]]
