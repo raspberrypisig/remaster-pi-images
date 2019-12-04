@@ -13,20 +13,22 @@ LOCALE = "en_AU.UTF-8"
 TIMEZONE = "Australia/Melbourne"
 
 [Raspbian.Interfaces]
-I2C=false
+I2C=true
 SPI=false
 SERIAL=false
 VNC=false
 CAMERA=false
 
 [Raspbian.Wifi]
-WIFI_COUNTRY= "AU"
-  [[Wifi]]
-  SSID = "CHANGEME1"
-  PSK = "CHANGEME1"
-  KEYMGMT = "WPA-PSK" 
-  [[Wifi]]
-  SSID = "CHANGEME2" 
-  PSK = "CHANGEME2"
-  KEYMGMT = "WPA-PSK"
+COUNTRY= "AU"
+
+[[Raspbian.Wifi.Wifi]]
+SSID = "MelbPC-NUE"
+PSK = "peachspeak38"
+KEYMGMT = "WPA-PSK" 
+
+[[Raspbian.Wifi.Wifi]]
+SSID = "mycrib" 
+PSK = "peachspeak38"
+KEYMGMT = "WPA-PSK"
 
