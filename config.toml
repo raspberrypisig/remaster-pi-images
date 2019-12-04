@@ -12,4 +12,9 @@ KEYBOARD = "us"
 LOCALE = "en_AU.UTF-8"
 TIMEZONE = "Australia/Melbourne"
 
-
+[Raspbian.Interfaces]
+I2C=false
+SPI=false
+SERIAL=false
+VNC=false
+CAMERA=false
