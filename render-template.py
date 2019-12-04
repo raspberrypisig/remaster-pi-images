@@ -7,8 +7,6 @@ import readConfig
 input_filename=sys.argv[1]
 output_filename=sys.argv[2]
 
-content=''
-
 with open(input_filename, 'r') as f:
     config = readConfig.getRaspbianConfig()
     content = chevron.render(f.read(), config)
