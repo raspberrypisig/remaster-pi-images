@@ -4,9 +4,25 @@ KEYBOARD="{{ KEYBOARD }}"
 LOCALE="{{ LOCALE }}"
 TIMEZONE="{{ TIMEZONE }}"
 
+{{Interfaces}}
+I2C="{{ I2C }}"
+SPI="{{ SPI }}"
+SERIAL="{{ SERIAL }}"
+VNC="{{ VNC }}"
+CAMERA="{{ CAMERA }}"
+{{/Interfaces}}
+
 raspi-config nonint do_configure_keyboard $KEYBOARD
 export LANG=$LOCALE
 export LC_ALL=$LOCALE
 export LANGUAGE=$LOCALE
 raspi-config nonint do_change_locale $LOCALE
 raspi-config nonint do_change_timezone $TIMEZONE
+
+raspi-config nonint do_i2c $I2C 
+raspi-config nonint do_spi $SPI
+raspi-config nonint do_serial $SERIAL
+raspi-config nonint do_vnc $VNC
+raspi-config nonint do_camera $CAMERA
+
+
