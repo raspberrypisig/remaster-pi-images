@@ -54,7 +54,7 @@ raspi-config nonint do_serial $SERIAL
 raspi-config nonint do_vnc $VNC
 raspi-config nonint do_camera $CAMERA
 
-{{#Wifi}}
+{{#Wifis}}
 cat<<<EOF > /boot/wpa_supplicant.conf 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
