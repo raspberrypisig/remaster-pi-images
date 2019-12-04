@@ -23,12 +23,12 @@ CAMERA=false
 COUNTRY= "AU"
 
 [[Raspbian.Wifis.Wifi]]
-SSID = "MelbPC-NUE"
-PSK = "peachspeak38"
+SSID = "CHANGEME1"
+PSK = "CHANGEME1"
 KEYMGMT = "WPA-PSK" 
 
 [[Raspbian.Wifis.Wifi]]
-SSID = "mycrib" 
-PSK = "peachspeak38"
+SSID = "CHANGEME2" 
+PSK = "CHANGEME2"
 KEYMGMT = "WPA-PSK"
 
