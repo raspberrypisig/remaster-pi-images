@@ -9,7 +9,7 @@ def main(*args):
 
 def getRaspbianConfig():
     config=toml.load('config.toml')
-    return config['Config']
+    return config['Raspbian']
 
 if __name__ == '__main__':
     print(main(sys.argv[1:]))
