@@ -7,7 +7,7 @@ REMASTERED_IMAGE = "2019-09-26-raspbian-buster-lite-remastered.img"
 INCREASE_DISK_SIZE_AMOUNT_MB = 2048
 ARCH = "arm"
 
-[Config]
+[Raspbian]
 KEYBOARD = "us"
 LOCALE = "en_AU.UTF-8"
 TIMEZONE = "Australia/Melbourne"
