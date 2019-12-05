@@ -4,55 +4,12 @@ KEYBOARD="{{ KEYBOARD }}"
 LOCALE="{{ LOCALE }}"
 TIMEZONE="{{ TIMEZONE }}"
 
-{{#Interfaces}}
-{{#I2C}}
-I2C=0
-{{/I2C}}
-{{^I2C}}
-I2C=1
-{{/I2C}}
-
-{{#SPI}}
-SPI=0
-{{/SPI}}
-{{^SPI}}
-SPI=1
-{{/SPI}}
-
-{{#SERIAL}}
-SERIAL=0
-{{/SERIAL}}
-{{^SERIAL}}
-SERIAL=1
-{{/SERIAL}}
-
-{{#VNC}}
-VNC=0
-{{/VNC}}
-{{^VNC}}
-VNC=1
-{{/VNC}}
-
-{{#CAMERA}}
-CAMERA=0
-{{/CAMERA}}
-{{^CAMERA}}
-CAMERA=1
-{{/CAMERA}}
-{{/Interfaces}}
-
 raspi-config nonint do_configure_keyboard $KEYBOARD
 export LANG=$LOCALE
 export LC_ALL=$LOCALE
 export LANGUAGE=$LOCALE
 raspi-config nonint do_change_locale $LOCALE
 raspi-config nonint do_change_timezone $TIMEZONE
-
-raspi-config nonint do_i2c $I2C 
-raspi-config nonint do_spi $SPI
-raspi-config nonint do_serial $SERIAL
-raspi-config nonint do_vnc $VNC
-raspi-config nonint do_camera $CAMERA
 
 {{#Wifis}}
 cat<<EOF > /boot/wpa_supplicant.conf 
