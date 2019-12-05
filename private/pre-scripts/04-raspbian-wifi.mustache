@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+{{#Wifis}}
+cat<<EOF > /boot/wpa_supplicant.conf 
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country={{COUNTRY}}
+
+{{#Wifi}}
+network={
+  ssid="{{SSID}}"
+  psk="{{PSK}}"
+  key_mgmt={{KEYMGMT}}
+}
+
+{{/Wifi}}
+
+{{/Wifis}}
+EOF
