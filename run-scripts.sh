@@ -28,12 +28,23 @@ do
   python3 render-template.py $script $newfile
 done
 
-for script in `ls private/pre-scripts/*.sh  scripts/*.sh private/post-scripts/*.sh||true`
-do
-  systemd-nspawn -D $mount_dir /$script
-done
+mv $mount_dir/etc/ld.so.preload /etc/ld.so.preload.bak
+touch $mount_dir/etc/ld.so.preload
+
+runScriptsInsideContainer() {
+  for script in $1
+  do
+    systemd-nspawn -D $mount_dir /$script
+  done
+}
+
+
+runScriptsInsideContainer "`ls private/pre-scripts/*.sh`"
+runScriptsInsideContainer "`ls scripts/*.sh`"
+#runScriptsInsideContainer "`ls private/post-scripts/*.sh`"
 
 rm $mount_dir/usr/bin/qemu-arm-static
+cp $mount_dir/etc/ld.so.preload.bak $mount_dir/etc/ld.so.preload
 
 umount $mount_dir/scripts
 rmdir $mount_dir/scripts
