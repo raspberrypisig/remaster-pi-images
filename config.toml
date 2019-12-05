@@ -5,7 +5,6 @@ comment = "Feel free to modify for your requirements."
 ORIGINAL_IMAGE = "2019-09-26-raspbian-buster-lite.img"
 REMASTERED_IMAGE = "2019-09-26-raspbian-buster-lite-remastered.img"
 INCREASE_DISK_SIZE_AMOUNT_MB = 2048
-ARCH = "arm"
 
 [Raspbian]
 KEYBOARD = "us"
