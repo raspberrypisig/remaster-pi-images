@@ -20,6 +20,8 @@ mount --bind private $mount_dir/private
 
 pip3 install chevron
 
+cp /usr/bin/qemu-arm-static $mount_dir/usr/bin
+
 for script in `ls private/{pre,post}-scripts/*.mustache 2>/dev/null||true`
 do
   newfile=$(echo $script|sed  's/.mustache$/.sh/')
@@ -30,6 +32,8 @@ for script in `ls private/pre-scripts/*.sh  scripts/*.sh private/post-scripts/*.
 do
   systemd-nspawn -D $mount_dir /$script
 done
+
+rm $mount_dir/usr/bin/qemu-arm-static
 
 umount $mount_dir/scripts
 rmdir $mount_dir/scripts
