@@ -4,7 +4,7 @@ set -xe
 
 REMASTERED_IMAGE="$1"
 
-apt install -y binfmt-support qemu qemu-user-static systemd-container
+apt install -y binfmt-support qemu-user-static systemd-container
 update-binfmts --display
 
 loop_disk_image=$(losetup --show -P -f $REMASTERED_IMAGE)
@@ -28,7 +28,7 @@ do
   python3 render-template.py $script $newfile
 done
 
-mv $mount_dir/etc/ld.so.preload /etc/ld.so.preload.bak
+mv $mount_dir/etc/ld.so.preload $mount_dir/etc/ld.so.preload.bak
 touch $mount_dir/etc/ld.so.preload
 
 runScriptsInsideContainer() {
